@@ -80,19 +80,18 @@ function Register() {
         <Fragment>
             <div className="main-wrap">
                 <div className="nav-header bg-transparent shadow-none border-0">
-                    <div className="nav-top w-100">
+                    <div className="nav-to p w-100">
                         <a href="/">
                         <img
              height={60}
-             className="mx-auto"
-             width="90%"
+             className="mr-auto" 
               src="assets/images/logo/logo1.png"
               alt="HH"
             /> 
                         </a>
                         <button className="nav-menu me-0 ms-auto"></button>
 
-                        <button onClick={() => connectWallet()} className="header-btn btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-auto cursot-pointer text-center lh-20 rounded-xl address-wrap">{currentAddress != null && currentAddress != undefined && currentAddress != '' ? currentAddress : "Connect Wallet"}</button>
+                        {/* <button onClick={() => connectWallet()} className="header-btn btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-auto cursot-pointer text-center lh-20 rounded-xl address-wrap">{currentAddress != null && currentAddress != undefined && currentAddress != '' ? currentAddress : "Connect Wallet"}</button> */}
                         {/* <a href="/register" className="header-btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-2 w100 text-center lh-20 rounded-xl">Connect Wallet</a> */}
                     </div>
                 </div>

@@ -45,10 +45,6 @@ function Login() {
         theme = localStorage.getItem("theme");
         setThemes(theme);
 
-
-
-
-
     }, [isAuthenticated, authError, userError, isUpdate])
 
     const formik = useFormik({
@@ -73,104 +69,45 @@ function Login() {
         <Fragment>
             <ToastContainer />
             <div className="main-wrap">
-                <div className="nav-header bg-transparent shadow-none border-0">
-                    <div className="nav-top w-100">
-                        <a href="/"> 
-                        <img
-             height={60}
-             className="mx-auto"
-             width="90%"
-              src="assets/images/logo/logo1.png"
-              alt="HH"
-            /> 
+                <div className="nav-header bg-white shadow border-0">
+                    <div className="nav-top w-100  " style={{ justifyContent: 'space-between' }}>
+                        <a href="/">
+                            <img
+                                height={60}
+                                className="mx-auto"
+                                width="90%"
+                                src="assets/images/logo/logo1.png"
+                                alt="HH"
+                            />
                         </a>
                         <button className="nav-menu me-0 ms-auto"></button>
-
-                        <button onClick={() => connectWallet()} className="header-btn btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-auto cursot-pointer text-center lh-20 rounded-xl address-wrap">{currentAddress != null && currentAddress != undefined && currentAddress != '' ? currentAddress : "Connect Wallet"}</button>
+                        <div className=" p-2 text-center mt-2">
+                            <div className="form-group mb-1">
+                                <button onClick={() => authenticate()} style={{ border: '2px solid grey' }}
+                                    className="form-control text-left style2-input text-dark fw-600  p-0 mb-2">
+                                    <img src="assets/images/fx.png" alt="icon" className="ms-2 w40 mb-1 me-2" /> <span className="mx-2">Sign in with Metamask</span></button>
+                            </div>
+                        </div>
+                        {/* <button onClick={() => connectWallet()} className="header-btn btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-auto cursot-pointer text-center lh-20 rounded-xl address-wrap">{currentAddress != null && currentAddress != undefined && currentAddress != '' ? currentAddress : "Connect Wallet"}</button> */}
 
                         {/* <a href="/register" className="header-btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-2 w100 text-center lh-20 rounded-xl">Register</a> */}
                     </div>
                 </div>
-                <div className="row theme-dark-bg"> 
-                    <div style={{marginTop:'50px'}} className="col-xl-8 theme-dark-bg mx-auto vh-100  align-items-center d-flex bg-white rounded-3 overflow-hidden">
-                        <div className="card shadow-none border-0 ms-auto me-auto login-card">
-                            <div className="card-body rounded-0 text-left">
-                                <h4 className="fw-700 display1-size display2-md-size mb-3">Login into <br />your account</h4>
+            </div>
+            <div className="container  " style={{ marginTop: '200px' }}>
+                <div className="row">
+                    <div className="col-8 mx-auto">
+                        <h1 className="text-center" style={{ fontSize: '40px' ,lineHeight:'56px', fontWeight: 'bold' }}>
+                            Decentralized Educational Network to Empower Learners!
+                        </h1>
+                        <h4 className="mt-2 mb-4 text-center fw-500">Connect in <span style={{color:'#589340'}}>Metaverse</span>, Share <span style={{color:'#589340'}}>Knowledge</span>, Showcase Projects, Get <span style={{color:'#589340'}}>Scholarships</span>, Earn Crypto!</h4>
 
-                                <div className="col-sm-12 p-0 text-center mt-2">
-                                    <div className="form-group mb-1">
-                                        <button onClick={() => authenticate()} style={{ border: '2px solid grey' }}
-                                            className="form-control text-left style2-input text-dark fw-600  p-0 mb-2">
-                                            <img src="assets/images/fx.png" alt="icon" className="ms-2 w40 mb-1 me-5" /> Sign in with Metamask</button>
-                                    </div>
-                                </div>
-
-                                <Divider className="my-3"><Chip label="OR" className="h4" /></Divider>
-
-                                <form onSubmit={formik.handleSubmit}>
-
-                                    <div className="form-group icon-input mb-3">
-                                        <FontAwesomeIcon style={{ position: 'absolute', top: '20px', left: '20px' }} className="font-sm text-grey-500 pe-0" icon={faAt} />
-                                        <input
-                                            type="text"
-                                            id="Username"
-                                            name="Username"
-                                            className="h4 style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
-                                            placeholder="Username"
-                                            {...formik.getFieldProps("Username")}
-                                        />
-                                        {formik.touched.Username && formik.errors.Username ? (
-                                            <div style={{ color: "red", fontWeight: 'bold' }}>{formik.errors.Username}</div>
-                                        ) : null}
-                                    </div>
-                                    <div className="form-group icon-input mb-1">
-                                        <input
-                                            type="Password"
-                                            id="Password"
-                                            name="Password"
-                                            className="h4 style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
-                                            placeholder="Password"
-                                            {...formik.getFieldProps("Password")}
-                                        />
-                                        <i className="font-sm ti-lock text-grey-500 pe-0"></i>
-                                        {formik.touched.Password && formik.errors.Password ? (
-                                            <div style={{ color: "red", fontWeight: 'bold' }}>{formik.errors.Password}</div>
-                                        ) : null}
-                                        <i className="font-sm ti-lock text-grey-500 pe-0"></i>
-                                    </div>
-                                    <div className="form-check text-left mb-3">
-                                        {/* <input type="checkbox" className="form-check-input mt-2" id="exampleCheck5" />
-                                        <label className="form-check-label font-xsss text-grey-500">Remember me</label> */}
-                                        <a href="/forgot" className="fw-600 font-xsss text-grey-700 mt-1 float-right h4">Reset your Password?</a>
-                                    </div>
-                                    <div className="col-sm-12 p-0 text-left">
-
-                                        <LoadingButton
-                                            color="secondary"
-                                            loading={isAuthenticating}
-                                            loadingPosition="start"
-                                            startIcon={<SaveIcon />}
-                                            className="form-control text-center style2-input text-white fw-600 bg-primary border-0 p-0 "
-                                            variant="contained"
-                                            type="submit"
-                                        >
-                                            Login
-                                        </LoadingButton>
-
-                                        {/* <button
-                                            type="submit"
-                                            className="form-control text-center style2-input text-white fw-600 bg-primary border-0 p-0 "
-                                        >
-                                            Login
-                                        </button> */}
-                                        <h6 className="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Don't have account?<a href="/auth" className="fw-700 ms-1">Register</a></h6>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
                     </div>
-
+                </div>
+                <div className="row theme-dark-bg mt-4" style={{ marginTop: '100px' }}>
+                    <div className=" shadow-lg border-2">
+                        <img src="assets/images/home1.png" width="100%" height="550" />
+                    </div>
                 </div>
             </div>
         </Fragment>

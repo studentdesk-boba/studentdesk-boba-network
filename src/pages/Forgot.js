@@ -90,7 +90,7 @@ function Forgot() {
                                     <div className="col-sm-12 p-0 text-left">
                                         <button
                                             type="submit"
-                                            className="form-control text-center style2-input text-white fw-600 bg-primary border-0 p-0 "
+                                            className="form-control text-center style2-input text-white fw-600 bg-gold-gradiant border-0 p-0 "
                                         >
                                             Send Email
                                         </button>
