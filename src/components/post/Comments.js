@@ -205,8 +205,8 @@ export default function Comments(props) {
         </div>
       </div>
       <ToastContainer />
-      <div className="card-body p-0 d-flex">
-        <span className="d-block font-xssss fw-500 mt-1 lh-3 text-grey-500">
+      <div className="card-body p-0 d-flex mb-2">
+        <span className="d-block font-xssss fw-500 mt-1 lh-3 text-dark">
           {element ? element.saveData["title"] : ""}
           <br /> {element ? element.saveData["tag"] : ""}
         </span>

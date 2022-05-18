@@ -14,7 +14,7 @@ import { ToastContainer } from 'react-bootstrap';
     return (
         <div className="">
             <ToastContainer />
-            <Button className=" contest" onClick={handleOpen}> ti tle</Button>
+            <Button className=" contest" onClick={handleOpen}> title</Button>
             <Modal show={open} className='theme-dark-bg' onHide={handleSumitClose} style={{ overflowY: 'scroll' }}>
                 <Modal.Header className='theme-dark-bg' closeButton>
                     <Modal.Title  className='h4'style={{ fontWeight: "600" }}>Title : title</Modal.Title>

@@ -266,7 +266,26 @@ function Header() {
                     </ListItemIcon>
                     <ListItemText className="fw-700  h4" primary="Leader Board" />
                   </ListItemButton>
-               
+                  <Link to={{ pathname: "https://studentdeskmeta.herokuapp.com/" }} target="_blank" > 
+                  <ListItemButton> 
+                    <ListItemIcon>
+                      <FontAwesomeIcon
+                        style={{
+                          padding: "12px",
+                          width: "20px",
+                          height: "20px",
+                        }}
+                        className="btn-round-md  bg-blue-gradiant text-white"
+                        icon={faStore}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      className="fw-700  h4"
+                      primary="Metaverse"
+                    />
+                    
+                  </ListItemButton>
+                  </Link>
                 </List>
 
                 {/* <li><Link to="/" className="nav-content-bttn open-font"><i className="feather-tv btn-round-md bg-blue-gradiant me-3"></i><span>Categories</span></Link></li> */}

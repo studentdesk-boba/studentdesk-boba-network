@@ -60,13 +60,13 @@ function LeaderBoard() {
                                                             style={{ minWidth: 170 }}
                                                             className='theme-dark-bg h4'
                                                         >
-                                                            Total HCK Points
+                                                            Total SDT Points
                                                         </TableCell>
                                                     </TableRow>
                                                 </TableHead>
                                                 <TableBody>
                                                     {
-                                                        rankData ? rankData.map((element) => { 
+                                                        rankData ? rankData.map((element) => {  
                                                             return (
                                                                 <TableRow key={element.rank} hover role="checkbox" tabIndex={-1} >
                                                                     <TableCell align={'left'} className='theme-dark-bg h4'>

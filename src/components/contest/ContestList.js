@@ -112,7 +112,7 @@ export default function ContestList(props) {
                                     Scholarship  :
                                 </h3>
                                 <h4 className="fw-700 font-xs start-date">
-                                    {props.data.contestData.prize}{" "}
+                                    ${props.data.contestData.prize}{" "}
                                 </h4>
                             </li>
 

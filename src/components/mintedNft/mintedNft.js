@@ -23,7 +23,7 @@ function MintedNft() {
     async function getMintedNft() { 
         const ids = [...tokenid]; 
         const result = await axios.get(`https://api.covalenthq.com/v1/1666700000/tokens/${tokenAddres}/transactions_v2/?key=ckey_d6812b57760b43418ee399bdf1d`); 
-        console.log(result);
+    
         const dd = result.data.items && result.data.items.map(async (e) => {
             ids.push(e.token_id); 
         })
