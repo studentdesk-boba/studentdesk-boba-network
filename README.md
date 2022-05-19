@@ -1,4 +1,21 @@
-# Studentdesk 
+# StudentDesk - Decentralized Educational Network to Empower Learners!
+
+# Problem: 
+**Education should be accessible and affordable to everyone regardless of where people belong to and their financial background. At StudentDesk, students can connect with like minded peers in Metaverse, Showcase Projects as their NFTs, Share Knowledge, Get Scholarships and get a chance to Earn Crypto for their contribution!**
+
+# Our solution:
+
+**Share and Collaborate:** Here members of the platform can follow other profiles as per their interest, share their ideas, projects, queries and ask for any help such as career guidance and mentoring for various education field. 
+
+**Metaverse:** Students can connect with other peers in real time and more engaging way in StudentDesk’s Metaverse. All the posts/NFTs of students will be also accessible in Metaverse and along with that Students can also Text chat and do Voice chat with online members.
+
+**Scholarships:** Through out the world, there are many scholarships for higher studies to various sports activities but not everyone is always aware about it. At StudentDesk, anyone can share the information about scholarships and students can list all the scholarships as per their interest at StudentDesk.
+
+**Earn Crypto and NFTs:** Students can showcase their project prototype or ideas and ask the community to contribute and raise fund to build the project as. Also as per their activity on the platform, they get reward points and a chance to claim NFT-Crypto as rewards.
+
+**StudentDeals:** Students will get all the deals which by our partner networks which will help them availa huge discounts for items and courses like, 1) Offer while purchasing laptop 2) Online course coupons etc 
+
+**Gamezone:** Students can get a chance to play different game and earn NFTs, discounts deals through these games. 
 
 # BOBA Netwrok configration 
 https://github.com/studentdesk-boba/studentdesk-boba-network/blob/master/hardhat.config.js
